@@ -6,7 +6,7 @@ import {
 	Post,
 	Put,
 } from "@overnightjs/core";
-import { CampaignSchemas, UtilitySchemas } from "@plunk/shared";
+import { CampaignSchemas, UtilitySchemas } from "@mailx/shared";
 import dayjs from "dayjs";
 import type { Request, Response } from "express";
 import { prisma } from "../../database/prisma";
@@ -125,11 +125,11 @@ export class Campaigns {
 					email:
 						project.verified && project.email
 							? project.email
-							: "no-reply@useplunk.dev",
+							: "no-reply@usemailx.dev",
 				},
 				to: members.map((m) => m.email),
 				content: {
-					subject: `[Plunk Campaign Test] ${campaign.subject}`,
+					subject: `[mailx Campaign Test] ${campaign.subject}`,
 					html: EmailService.compile({
 						content: campaign.body,
 						footer: {

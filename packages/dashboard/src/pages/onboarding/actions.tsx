@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ActionSchemas, EventSchemas, TemplateSchemas } from "@plunk/shared";
+import { ActionSchemas, EventSchemas, TemplateSchemas } from "@mailx/shared";
 import type { Template } from "@prisma/client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
@@ -32,7 +32,7 @@ interface TemplateValues {
 	subject: string;
 	body: string;
 	type: "MARKETING" | "TRANSACTIONAL";
-	style: "PLUNK" | "HTML";
+	style: "mailx" | "HTML";
 }
 
 interface ActionValues {
@@ -104,12 +104,12 @@ export default function Index() {
 		resolver: zodResolver(TemplateSchemas.create),
 		defaultValues: {
 			type: "MARKETING",
-			style: "PLUNK",
-			subject: "Welcome to Plunk!",
+			style: "mailx",
+			subject: "Welcome to mailx!",
 			body:
-				'<h1 id="welcome-to-plunk-">Welcome to Plunk!</h1>\n' +
-				"<p>Writing emails in Plunk is super easy, anyone do it! \n" +
-				'They also support all sorts of cool stuff like <code>code blocks</code>, <strong>bold text</strong>, and <a href="https://www.useplunk.com">links</a>.</p><p><strong>Highlight this text</strong> and see what is possible!</p>',
+				'<h1 id="welcome-to-mailx-">Welcome to mailx!</h1>\n' +
+				"<p>Writing emails in mailx is super easy, anyone do it! \n" +
+				'They also support all sorts of cool stuff like <code>code blocks</code>, <strong>bold text</strong>, and <a href="https://www.usemailx.com">links</a>.</p><p><strong>Highlight this text</strong> and see what is possible!</p>',
 		},
 	});
 
@@ -185,7 +185,7 @@ export default function Index() {
 	const createAction = (data: ActionValues) => {
 		toast.promise(
 			Promise.all([
-				fetch("/api/plunk", {
+				fetch("/api/mailx", {
 					method: "POST",
 					body: JSON.stringify({
 						event: "onboarding-completed",
@@ -246,7 +246,7 @@ export default function Index() {
 							</motion.span>
 							<h2 className={"my-4 text-4xl font-bold"}>Let's get started!</h2>
 							<div className={"max-w-2xl font-medium text-neutral-500"}>
-								<p>Are you ready to give Plunk Actions a spin?</p>
+								<p>Are you ready to give mailx Actions a spin?</p>
 
 								<p>
 									In this 3 step tutorial, we'll help you set up your first
@@ -396,7 +396,7 @@ requests.post(
 													curl: `curl --location --request POST '${API_URI}/v1/track' \\
 --header 'Authorization: Bearer ${activeProject.secret}' \\
 --header 'Content-Type: application/json' \\
---data-raw '{"email": "hello@useplunk.com", "event": "new-project"}'`,
+--data-raw '{"email": "hello@usemailx.com", "event": "new-project"}'`,
 
 													PHP: `<?php
 $client = new Client();
@@ -434,7 +434,7 @@ response = https.request(request)`,
 									className={"flex flex-col items-center justify-center p-4"}
 								>
 									<h3 className={"text-center font-semibold text-neutral-800"}>
-										From Plunk
+										From mailx
 									</h3>
 									<div
 										className={
@@ -526,7 +526,7 @@ response = https.request(request)`,
 														<li className={"mb-6"}>
 															<span className={"font-semibold"}>Marketing</span>
 															<br />
-															Promotional emails with a Plunk-hosted unsubscribe
+															Promotional emails with a mailx-hosted unsubscribe
 															link
 															<br />
 															<span className={"text-neutral-400"}>
@@ -586,7 +586,7 @@ response = https.request(request)`,
 								<div className={"sm:col-span-6"}>
 									<Editor
 										value={templateWatch("body")}
-										mode={"PLUNK"}
+										mode={"mailx"}
 										onChange={(val) => templateSetValue("body", val)}
 									/>
 									<AnimatePresence>
@@ -672,7 +672,7 @@ response = https.request(request)`,
 										)[0].name
 									}
 								</span>
-								. There is loads more to discover in Plunk but let's try out
+								. There is loads more to discover in mailx but let's try out
 								your action first!
 							</p>
 							<motion.button

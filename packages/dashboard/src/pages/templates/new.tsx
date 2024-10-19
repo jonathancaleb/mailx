@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { TemplateSchemas } from "@plunk/shared";
+import { TemplateSchemas } from "@mailx/shared";
 import type { Template } from "@prisma/client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
@@ -23,7 +23,7 @@ interface TemplateValues {
 	subject: string;
 	body: string;
 	type: "MARKETING" | "TRANSACTIONAL";
-	style: "PLUNK" | "HTML";
+	style: "mailx" | "HTML";
 }
 
 const templates = {
@@ -53,7 +53,7 @@ export default function Index() {
 		defaultValues: {
 			...templates.blank,
 			type: "MARKETING",
-			style: "PLUNK",
+			style: "mailx",
 		},
 	});
 
@@ -120,7 +120,7 @@ export default function Index() {
 												<li className={"mb-6"}>
 													<span className={"font-semibold"}>Marketing</span>
 													<br />
-													Promotional emails with a Plunk-hosted unsubscribe
+													Promotional emails with a mailx-hosted unsubscribe
 													link
 													<br />
 													<span className={"text-neutral-400"}>

@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ProjectSchemas, type UtilitySchemas } from "@plunk/shared";
+import { ProjectSchemas, type UtilitySchemas } from "@mailx/shared";
 import { network } from "dashboard/src/lib/network";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
@@ -83,7 +83,7 @@ export default function Index() {
 	const deleteProject = async () => {
 		setShowDeleteModal(!showDeleteModal);
 
-		await fetch("/api/plunk", {
+		await fetch("/api/mailx", {
 			method: "POST",
 			body: JSON.stringify({
 				event: "project-deleted",
@@ -147,7 +147,7 @@ export default function Index() {
 							<Input
 								register={register("url")}
 								label={"URL"}
-								placeholder={"https://useplunk.com"}
+								placeholder={"https://usemailx.com"}
 								error={errors.url}
 							/>
 						</div>

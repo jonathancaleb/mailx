@@ -1,4 +1,4 @@
-import type { EventSchemas } from "@plunk/shared";
+import type { EventSchemas } from "@mailx/shared";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
@@ -56,7 +56,7 @@ export default function Index() {
 								</motion.span>
 								<h2 className={"my-4 text-2xl font-bold"}>Wasn't that easy?</h2>
 								<p className={"font-medium text-neutral-500"}>
-									Just like that you've sent your first email with Plunk!
+									Just like that you've sent your first email with mailx!
 								</p>
 								<motion.button
 									whileHover={{ scale: 1.05 }}
@@ -68,7 +68,7 @@ export default function Index() {
 										await router.push("/");
 									}}
 								>
-									Explore the rest of Plunk
+									Explore the rest of mailx
 								</motion.button>
 							</motion.div>
 						</>
@@ -94,7 +94,7 @@ export default function Index() {
 									<h2 className={"my-4 text-4xl font-bold"}>Send it!</h2>
 									<div className={"max-w-2xl font-medium text-neutral-500"}>
 										<p>
-											Are you ready to send a transactional email with Plunk?
+											Are you ready to send a transactional email with mailx?
 										</p>
 
 										<p>
@@ -133,7 +133,7 @@ export default function Index() {
   body: JSON.stringify({
     to: "${user.email}",
     subject: "Your first email",
-    body: "Hello from Plunk!"
+    body: "Hello from mailx!"
   }),
   headers: {
     'Content-Type': 'application/json',
@@ -147,20 +147,20 @@ requests.post(
     headers={"Content-Type": "application/json", "Authorization": "Bearer ${project.secret}"},
     json={
       "subject": "Your first email",
-      "body": "Hello from Plunk!", 
+      "body": "Hello from mailx!", 
       "to": "${user.email}", 
     },
 )`,
 												curl: `curl --location --request POST '${API_URI}/v1/send' \\
 --header 'Authorization: Bearer ${project.secret}' \\
 --header 'Content-Type: application/json' \\
---data-raw '{"subject": "Your first email", "body": "Hello from Plunk!", "to": "${user.email}"}'`,
+--data-raw '{"subject": "Your first email", "body": "Hello from mailx!", "to": "${user.email}"}'`,
 
 												PHP: `<?php
 $client = new Client();
 $request = new Request('POST', '${API_URI}/v1/send', ['Authorization' => 'Bearer ${project.secret}', 'Content-Type' => 'application/json'], '{
   "subject": "Your first email",
-  "body": "Hello from Plunk!", 
+  "body": "Hello from mailx!", 
   "to": "${user.email}", 
 }');
 $res = $client->sendAsync($request)->wait();`,
@@ -179,7 +179,7 @@ request["Authorization"] = "Bearer ${project.secret}"
 request["Content-Type"] = "application/json"
 request.body = JSON.dump({
   "subject": "Your first email",
-  "body": "Hello from Plunk!", 
+  "body": "Hello from mailx!", 
   "to": "${user.email}", 
 })
 
@@ -202,7 +202,7 @@ response = https.request(request)`,
 												"/v1/send",
 												{
 													subject: "Your first email",
-													body: "Hello from Plunk!",
+													body: "Hello from mailx!",
 													to: user.email,
 												},
 											),

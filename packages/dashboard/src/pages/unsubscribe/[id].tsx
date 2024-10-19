@@ -1,4 +1,4 @@
-import type { UtilitySchemas } from "@plunk/shared";
+import type { UtilitySchemas } from "@mailx/shared";
 import type { User } from "@prisma/client";
 import { motion } from "framer-motion";
 import { NextSeo } from "next-seo";

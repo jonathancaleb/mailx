@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { UserSchemas } from "@plunk/shared";
+import { UserSchemas } from "@mailx/shared";
 import type { User } from "@prisma/client";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -90,11 +90,11 @@ export default function Index() {
 								width={35}
 								height={35}
 								src={logo}
-								alt={"Plunk logo"}
+								alt={"mailx logo"}
 								placeholder={"blur"}
 							/>
 							<h2 className="mt-6 text-3xl font-extrabold text-neutral-800">
-								Create a Plunk account
+								Create a mailx account
 							</h2>
 							<div>
 								<Link
@@ -125,7 +125,7 @@ export default function Index() {
 													"block w-full rounded border-neutral-300 transition ease-in-out focus:border-neutral-800 focus:ring-neutral-800 sm:text-sm"
 												}
 												autoComplete={"email"}
-												placeholder={"hello@useplunk.com"}
+												placeholder={"hello@usemailx.com"}
 												{...register("email")}
 											/>
 										</div>

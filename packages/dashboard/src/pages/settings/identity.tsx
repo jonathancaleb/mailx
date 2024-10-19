@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { IdentitySchemas, type UtilitySchemas } from "@plunk/shared";
+import { IdentitySchemas, type UtilitySchemas } from "@mailx/shared";
 import { motion } from "framer-motion";
 import { Copy, Unlink } from "lucide-react";
 import React, { useEffect } from "react";
@@ -182,11 +182,11 @@ export default function Index() {
 												<div
 													className={"flex cursor-pointer items-center gap-3"}
 													onClick={() => {
-														void navigator.clipboard.writeText("plunk");
+														void navigator.clipboard.writeText("mailx");
 														toast.success("Copied key to clipboard");
 													}}
 												>
-													<p className={"font-mono text-sm"}>plunk</p>
+													<p className={"font-mono text-sm"}>mailx</p>
 													<Copy size={14} />
 												</div>
 											),
@@ -213,11 +213,11 @@ export default function Index() {
 												<div
 													className={"flex cursor-pointer items-center gap-3"}
 													onClick={() => {
-														void navigator.clipboard.writeText("plunk");
+														void navigator.clipboard.writeText("mailx");
 														toast.success("Copied key to clipboard");
 													}}
 												>
-													<p className={"font-mono text-sm"}>plunk</p>
+													<p className={"font-mono text-sm"}>mailx</p>
 													<Copy size={14} />
 												</div>
 											),
@@ -283,7 +283,7 @@ export default function Index() {
 						<>
 							<Alert type={"success"} title={"Domain verified"}>
 								You have confirmed {activeProject.email} as your domain. Any
-								emails sent by Plunk will now use this address.
+								emails sent by mailx will now use this address.
 							</Alert>
 						</>
 					) : (
@@ -328,7 +328,7 @@ export default function Index() {
 				<Card
 					title={"Sender name"}
 					description={
-						"The name that will be used when sending emails from Plunk. Your project name will be used by default"
+						"The name that will be used when sending emails from mailx. Your project name will be used by default"
 					}
 				>
 					<form onSubmit={handleSubmitUpdate(update)} className="space-y-6">

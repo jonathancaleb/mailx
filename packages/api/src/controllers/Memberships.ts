@@ -1,5 +1,5 @@
 import { Controller, Middleware, Post } from "@overnightjs/core";
-import { MembershipSchemas, UtilitySchemas } from "@plunk/shared";
+import { MembershipSchemas, UtilitySchemas } from "@mailx/shared";
 import type { Request, Response } from "express";
 import {
 	HttpException,

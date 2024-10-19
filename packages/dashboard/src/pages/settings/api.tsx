@@ -132,7 +132,7 @@ export default function Index() {
 
 							<p className={"text-sm text-neutral-500"}>
 								Use this key for any secure back-end services. This key gives
-								complete access to your Plunk setup.
+								complete access to your mailx setup.
 							</p>
 						</div>
 					</div>

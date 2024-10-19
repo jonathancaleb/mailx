@@ -18,10 +18,10 @@
     "experimentalDecorators": true,
     "baseUrl": "packages",
     "paths": {
-      "@plunk/shared": [
+      "@mailx/shared": [
         "./packages/shared/"
       ],
-      "@plunk/shared/*": [
+      "@mailx/shared/*": [
         "./packages/shared/*"
       ]
     }

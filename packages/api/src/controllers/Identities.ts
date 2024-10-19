@@ -1,5 +1,5 @@
 import { Controller, Get, Middleware, Post } from "@overnightjs/core";
-import { IdentitySchemas, UtilitySchemas } from "@plunk/shared";
+import { IdentitySchemas, UtilitySchemas } from "@mailx/shared";
 import type { Request, Response } from "express";
 import signale from "signale";
 import { prisma } from "../database/prisma";

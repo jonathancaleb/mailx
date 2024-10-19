@@ -32,7 +32,7 @@ export const verifyIdentity = async (email: string) => {
 
 	await ses.setIdentityMailFromDomain({
 		Identity: email.includes("@") ? email.split("@")[1] : email,
-		MailFromDomain: `plunk.${email.includes("@") ? email.split("@")[1] : email}`,
+		MailFromDomain: `mailx.${email.includes("@") ? email.split("@")[1] : email}`,
 	});
 
 	return DKIM.DkimTokens;

@@ -6,7 +6,7 @@ import {
 	ContactSchemas,
 	EventSchemas,
 	type UtilitySchemas,
-} from "@plunk/shared";
+} from "@mailx/shared";
 import type { Contact, Email, Template } from "@prisma/client";
 import dayjs from "dayjs";
 import { motion } from "framer-motion";

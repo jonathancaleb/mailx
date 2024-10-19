@@ -1,5 +1,5 @@
 import { Controller, Get, Post } from "@overnightjs/core";
-import { UserSchemas, UtilitySchemas } from "@plunk/shared";
+import { UserSchemas, UtilitySchemas } from "@mailx/shared";
 import type { Request, Response } from "express";
 import { prisma } from "../database/prisma";
 import { NotAllowed, NotFound } from "../exceptions";

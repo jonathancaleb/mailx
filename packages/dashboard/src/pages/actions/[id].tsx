@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ActionSchemas, type UtilitySchemas } from "@plunk/shared";
+import { ActionSchemas, type UtilitySchemas } from "@mailx/shared";
 import type { Action } from "@prisma/client";
 import { useEvents } from "dashboard/src/lib/hooks/events";
 import { useTemplates } from "dashboard/src/lib/hooks/templates";

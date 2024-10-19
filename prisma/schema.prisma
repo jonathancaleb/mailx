@@ -304,7 +304,7 @@ enum TemplateType {
 }
 
 enum TemplateStyle {
-  PLUNK
+  mailx
   HTML
 }
 

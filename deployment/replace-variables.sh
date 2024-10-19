@@ -10,7 +10,7 @@ fi
 # Find and replace baked values with real values for the API_URI
 find /app/packages/dashboard/public /app/packages/dashboard/.next -type f -name "*.js" |
 while read file; do
-    sed -i "s|PLUNK_API_URI|${API_URI}|g" "$file"
+    sed -i "s|mailx_API_URI|${API_URI}|g" "$file"
 done
 
 echo "Environment Variables Baked."

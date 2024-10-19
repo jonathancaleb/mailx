@@ -6,7 +6,7 @@ import {
 	Post,
 	Put,
 } from "@overnightjs/core";
-import { ContactSchemas, UtilitySchemas } from "@plunk/shared";
+import { ContactSchemas, UtilitySchemas } from "@mailx/shared";
 import type { Request, Response } from "express";
 import z from "zod";
 import { prisma } from "../../database/prisma";

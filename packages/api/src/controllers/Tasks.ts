@@ -62,8 +62,8 @@ export class Tasks {
 					subject: template.subject,
 					body: template.body,
 					data: {
-						plunk_id: contact.id,
-						plunk_email: contact.email,
+						mailx_id: contact.id,
+						mailx_email: contact.email,
 						...JSON.parse(contact.data ?? "{}"),
 					},
 				}));
@@ -72,8 +72,8 @@ export class Tasks {
 					subject: campaign.subject,
 					body: campaign.body,
 					data: {
-						plunk_id: contact.id,
-						plunk_email: contact.email,
+						mailx_id: contact.id,
+						mailx_email: contact.email,
 						...JSON.parse(contact.data ?? "{}"),
 					},
 				}));
@@ -85,7 +85,7 @@ export class Tasks {
 					email:
 						project.verified && project.email
 							? project.email
-							: "no-reply@useplunk.dev",
+							: "no-reply@usemailx.dev",
 				},
 				to: [contact.email],
 				content: {

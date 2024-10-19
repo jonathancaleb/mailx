@@ -180,7 +180,7 @@ export default function Index() {
 							<div className="mt-2 flex h-4/6 flex-col justify-end">
 								<h3 className="text-lg font-medium">
 									<a
-										href={"https://docs.useplunk.com"}
+										href={"https://docs.usemailx.com"}
 										target={"_blank"}
 										className="focus:outline-none"
 										rel="noreferrer"
@@ -190,7 +190,7 @@ export default function Index() {
 									</a>
 								</h3>
 								<p className="mt-2 text-sm text-neutral-500">
-									Discover how to use Plunk
+									Discover how to use mailx
 								</p>
 							</div>
 							<span

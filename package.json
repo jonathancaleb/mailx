@@ -1,5 +1,5 @@
 {
-	"name": "plunk",
+	"name": "mailx",
 	"version": "1.0.0",
 	"private": true,
 	"license": "MIT",
@@ -23,12 +23,12 @@
 		"@prisma/client": "^5.17.0"
 	},
 	"scripts": {
-		"dev:api": "yarn workspace @plunk/api dev",
-		"dev:dashboard": "yarn workspace @plunk/dashboard dev",
-		"dev:shared": "yarn workspace @plunk/shared dev",
-		"build:api": "yarn build:shared && yarn workspace @plunk/api build",
-		"build:dashboard": "yarn build:shared && yarn workspace @plunk/dashboard build",
-		"build:shared": "yarn generate && yarn workspace @plunk/shared build",
+		"dev:api": "yarn workspace @mailx/api dev",
+		"dev:dashboard": "yarn workspace @mailx/dashboard dev",
+		"dev:shared": "yarn workspace @mailx/shared dev",
+		"build:api": "yarn build:shared && yarn workspace @mailx/api build",
+		"build:dashboard": "yarn build:shared && yarn workspace @mailx/dashboard build",
+		"build:shared": "yarn generate && yarn workspace @mailx/shared build",
 		"clean": "rimraf node_modules yarn.lock && yarn add lerna -DW && lerna run clean",
 		"preinstall": "node tools/preinstall.js",
 		"migrate": "prisma migrate dev",

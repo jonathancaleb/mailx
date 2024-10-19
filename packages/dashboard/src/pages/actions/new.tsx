@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ActionSchemas } from "@plunk/shared";
+import { ActionSchemas } from "@mailx/shared";
 import type { Template } from "@prisma/client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";

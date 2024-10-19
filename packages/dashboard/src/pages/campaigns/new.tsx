@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CampaignSchemas } from "@plunk/shared";
+import { CampaignSchemas } from "@mailx/shared";
 import type { Campaign } from "@prisma/client";
 import { Ring } from "@uiball/loaders";
 import dayjs from "dayjs";
@@ -29,7 +29,7 @@ interface CampaignValues {
 	subject: string;
 	body: string;
 	recipients: string[];
-	style: "PLUNK" | "HTML";
+	style: "mailx" | "HTML";
 }
 
 const templates = {
@@ -72,7 +72,7 @@ export default function Index() {
 		defaultValues: {
 			recipients: [],
 			...templates.blank,
-			style: "PLUNK",
+			style: "mailx",
 		},
 	});
 

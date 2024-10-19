@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ContactSchemas } from "@plunk/shared";
+import { ContactSchemas } from "@mailx/shared";
 import type { Template } from "@prisma/client";
 import dayjs from "dayjs";
 import { AnimatePresence, motion } from "framer-motion";
@@ -332,7 +332,7 @@ export default function Index() {
 							className={
 								"block w-full rounded border-neutral-300 transition ease-in-out focus:border-neutral-800 focus:ring-neutral-800 sm:text-sm"
 							}
-							placeholder={"hello@useplunk.com"}
+							placeholder={"hello@usemailx.com"}
 							{...register("email")}
 						/>
 					</div>

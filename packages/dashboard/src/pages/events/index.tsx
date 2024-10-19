@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { EventSchemas, type UtilitySchemas } from "@plunk/shared";
+import { EventSchemas, type UtilitySchemas } from "@mailx/shared";
 import type { Template } from "@prisma/client";
 import dayjs from "dayjs";
 import { motion } from "framer-motion";
@@ -157,7 +157,7 @@ export default function Index() {
 
 				<Card
 					title={"Events"}
-					description={"View the events your application has sent to Plunk"}
+					description={"View the events your application has sent to mailx"}
 					actions={
 						<>
 							<motion.button
@@ -354,7 +354,7 @@ export default function Index() {
 						) : (
 							<Empty
 								title={"No events"}
-								description={"You have not yet posted an event to Plunk"}
+								description={"You have not yet posted an event to mailx"}
 							/>
 						)
 					) : (

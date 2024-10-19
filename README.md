@@ -1,28 +1,19 @@
-![card.png](/assets/card.png)
-
-<h1 align="center">Plunk</h1>
-
-<p align="center">
-    The Open-Source Email Platform for AWS
-</p>
-
-<p align="center">
-    <img src="https://img.shields.io/github/contributors/useplunk/plunk"/>
-    <img src="https://img.shields.io/github/actions/workflow/status/driaug/plunk-whitelabel/docker-build.yml"/>
-    <img src="https://img.shields.io/docker/pulls/driaug/plunk"/>
-</p>
+# 📧 mailx - Your Open-Source Email Platform
 
 ## Introduction
-Plunk is an open-source email platform built on top of AWS SES. It allows you to easily send emails from your applications.
-It can be considered as a self-hosted alternative to services like [SendGrid](https://sendgrid.com/), [Resend](https://resend.com) or [Mailgun](https://www.mailgun.com/).
+
+mailx is an open-source email platform designed to help you send reliable, scalable emails from your applications. Built on top of Google Cloud services, mailx provides a robust, self-hosted alternative to solutions like SendGrid, Resend, or Mailgun, while offering you full control and flexibility. 🚀
+
+This project was developed as a personal initiative to deepen my understanding of cloud platforms, email infrastructure, and system architecture. The design and architecture of mailx are inspired by the open-source foundations of platforms like SendGrid, Plunk, and others, while incorporating my own learning and innovations. 💡
 
 ## Features
-- **Transactional Emails**: Send emails straight from your API
-- **Automations**: Create automations based on user actions
-- **Broadcasts**: Send newsletters and product updates to big audiences
 
-## Self-hosting Plunk
-The easiest way to self-host Plunk is by using the `driaug/plunk` Docker image.
-You can pull the latest image from [Docker Hub](https://hub.docker.com/r/driaug/plunk/).
+- **Transactional Emails**: Send highly efficient, secure emails directly from your API. ✉️
+- **Automations**: Create smart automations to trigger emails based on user actions or events. 🔄
+- **Broadcasts**: Effortlessly send newsletters and product updates to your entire audience with just a few clicks. 📬
 
-A complete guide on how to deploy Plunk can be found in the [documentation](https://docs.useplunk.com/getting-started/self-hosting).
+## Self-Hosting mailx
+
+Self-hosting mailx is simple with the `driaug/mailx` Docker image. You can pull the latest image from Docker Hub. 🐳
+
+To get started with deploying mailx using Google Cloud Platform (GCP) or other cloud alternatives, follow the detailed guide in our documentation. 📖

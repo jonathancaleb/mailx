@@ -37,8 +37,8 @@ import Slash from "./extensions/Slash";
 
 export interface MarkdownEditorProps {
 	value: string;
-	mode: "PLUNK" | "HTML";
-	onChange: (value: string, type: "PLUNK" | "HTML") => void;
+	mode: "mailx" | "HTML";
+	onChange: (value: string, type: "mailx" | "HTML") => void;
 	modeSwitcher?: boolean;
 }
 
@@ -127,7 +127,7 @@ export default function Editor({
 			},
 		},
 		onUpdate: ({ editor }) => {
-			onChange(editor.getHTML(), "PLUNK");
+			onChange(editor.getHTML(), "mailx");
 		},
 	});
 
@@ -298,10 +298,10 @@ export default function Editor({
 				isOpen={confirmModal}
 				onToggle={() => setConfirmModal(!confirmModal)}
 				onAction={() => {
-					if (mode === "PLUNK") {
+					if (mode === "mailx") {
 						void onChange("", "HTML");
 					} else {
-						void onChange("", "PLUNK");
+						void onChange("", "mailx");
 					}
 
 					editor.chain().clearContent().run();
@@ -312,7 +312,7 @@ export default function Editor({
 				<div className={"flex flex-col gap-3"}>
 					<p className={"text-sm text-neutral-700"}>
 						Are you sure you want to switch to{" "}
-						{mode === "PLUNK" ? "HTML" : "the Plunk Editor"}? <br /> This will
+						{mode === "mailx" ? "HTML" : "the mailx Editor"}? <br /> This will
 						clear your current content.
 					</p>
 				</div>
@@ -325,10 +325,10 @@ export default function Editor({
 							setConfirmModal(true);
 						}}
 						className={`w-full flex-1 rounded p-2 text-sm font-medium ${
-							mode === "PLUNK" ? "bg-white" : "hover:bg-neutral-50"
+							mode === "mailx" ? "bg-white" : "hover:bg-neutral-50"
 						} transition ease-in-out`}
 					>
-						Plunk Editor
+						mailx Editor
 					</button>
 					<button
 						onClick={(e) => {
@@ -661,7 +661,7 @@ export default function Editor({
 			</Modal>
 			<div>
 				<>
-					{mode === "PLUNK" ? (
+					{mode === "mailx" ? (
 						<>
 							<div
 								onClick={() => {

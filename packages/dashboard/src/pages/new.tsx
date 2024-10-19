@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ProjectSchemas } from "@plunk/shared";
+import { ProjectSchemas } from "@mailx/shared";
 import type { Project } from "@prisma/client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useAtom } from "jotai";

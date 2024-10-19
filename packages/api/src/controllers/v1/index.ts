@@ -4,7 +4,7 @@ import {
 	Middleware,
 	Post,
 } from "@overnightjs/core";
-import { EventSchemas } from "@plunk/shared";
+import { EventSchemas } from "@mailx/shared";
 import dayjs from "dayjs";
 import type { Request, Response } from "express";
 import signale from "signale";
@@ -236,8 +236,8 @@ export class V1 {
 					subject,
 					body,
 					data: {
-						plunk_id: contact.id,
-						plunk_email: contact.email,
+						mailx_id: contact.id,
+						mailx_email: contact.email,
 						...JSON.parse(contact.data ?? "{}"),
 					},
 				});

@@ -27,5 +27,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: driaug/plunk:latest
+          tags: driaug/mailx:latest
           platforms: linux/amd64,linux/arm64

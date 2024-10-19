@@ -2,7 +2,7 @@
 CREATE TYPE "TemplateType" AS ENUM ('MARKETING', 'TRANSACTIONAL');
 
 -- CreateEnum
-CREATE TYPE "TemplateStyle" AS ENUM ('PLUNK', 'HTML');
+CREATE TYPE "TemplateStyle" AS ENUM ('mailx', 'HTML');
 
 -- CreateEnum
 CREATE TYPE "EmailStatus" AS ENUM ('SENT', 'DELIVERED', 'BOUNCED', 'OPENED', 'COMPLAINT');

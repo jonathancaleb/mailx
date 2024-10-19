@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { MembershipSchemas, type UtilitySchemas } from "@plunk/shared";
+import { MembershipSchemas, type UtilitySchemas } from "@mailx/shared";
 import type { Project, Role } from "@prisma/client";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
@@ -157,7 +157,7 @@ export default function Index() {
 				type={"info"}
 				title={"Invite a new member"}
 				description={
-					"Enter the email of the account you want to invite to this project. The person you want to invite needs to have an account on Plunk."
+					"Enter the email of the account you want to invite to this project. The person you want to invite needs to have an account on mailx."
 				}
 			>
 				<Input

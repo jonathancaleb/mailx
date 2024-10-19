@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { UserSchemas, UtilitySchemas } from "@plunk/shared";
+import { UserSchemas, UtilitySchemas } from "@mailx/shared";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import React, { useState } from "react";

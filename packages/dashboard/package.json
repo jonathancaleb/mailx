@@ -1,5 +1,5 @@
 {
-	"name": "@plunk/dashboard",
+	"name": "@mailx/dashboard",
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
@@ -11,7 +11,7 @@
 	"dependencies": {
 		"@hookform/resolvers": "^3.9.0",
 		"@monaco-editor/react": "^4.6.0",
-		"@plunk/shared": "1.0.0",
+		"@mailx/shared": "1.0.0",
 		"@svgr/webpack": "^8.1.0",
 		"@tippyjs/react": "^4.2.6",
 		"@tiptap/core": "^2.5.4",

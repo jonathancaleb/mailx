@@ -48,7 +48,7 @@ const zodSchema = z.record(
       z
         .string({
           invalid_type_error:
-            'Metadata can only be a string, array of strings or a non-persistent object (https://docs.useplunk.com/working-with-contacts/metadata#non-persistent-metadata)',
+            'Metadata can only be a string, array of strings or a non-persistent object (https://docs.usemailx.com/working-with-contacts/metadata#non-persistent-metadata)',
         })
         .transform(s => {
           return {persistent: true, value: s};
@@ -57,7 +57,7 @@ const zodSchema = z.record(
         .array(
           z.string({
             invalid_type_error:
-              'Metadata can only be a string, array of strings or a non-persistent object (https://docs.useplunk.com/working-with-contacts/metadata#non-persistent-metadata)',
+              'Metadata can only be a string, array of strings or a non-persistent object (https://docs.usemailx.com/working-with-contacts/metadata#non-persistent-metadata)',
           }),
         )
         .transform(s => {
@@ -68,21 +68,21 @@ const zodSchema = z.record(
           persistent: z.boolean({invalid_type_error: 'Persistent should be a boolean'}).optional().default(true),
           value: z.union([z.string(), z.array(z.string())], {
             invalid_type_error:
-              'Metadata can only be a string, array of strings or a non-persistent object (https://docs.useplunk.com/working-with-contacts/metadata#non-persistent-metadata)',
+              'Metadata can only be a string, array of strings or a non-persistent object (https://docs.usemailx.com/working-with-contacts/metadata#non-persistent-metadata)',
           }),
         },
         {
           invalid_type_error:
-            'Metadata can only be a string, array of strings or a non-persistent object (https://docs.useplunk.com/working-with-contacts/metadata#non-persistent-metadata)',
+            'Metadata can only be a string, array of strings or a non-persistent object (https://docs.usemailx.com/working-with-contacts/metadata#non-persistent-metadata)',
         },
       ),
     ],
     {
       invalid_type_error:
-        'Metadata can only be a string, array of strings or a non-persistent object (https://docs.useplunk.com/working-with-contacts/metadata#non-persistent-metadata)',
+        'Metadata can only be a string, array of strings or a non-persistent object (https://docs.usemailx.com/working-with-contacts/metadata#non-persistent-metadata)',
     },
   ),
-  {invalid_type_error: 'Metadata should be an object (https://docs.useplunk.com/working-with-contacts/metadata)'},
+  {invalid_type_error: 'Metadata should be an object (https://docs.usemailx.com/working-with-contacts/metadata)'},
 );
 export const EventSchemas = {
   post: z.object({
@@ -90,14 +90,14 @@ export const EventSchemas = {
     subscribed: z
       .boolean({
         invalid_type_error:
-          'Subscribed should be a boolean. Read more: https://docs.useplunk.com/api-reference/actions/track',
+          'Subscribed should be a boolean. Read more: https://docs.usemailx.com/api-reference/actions/track',
       })
       .nullish(),
     event: z
       .string({
-        required_error: 'Event is required. Read more: https://docs.useplunk.com/api-reference/actions/track',
+        required_error: 'Event is required. Read more: https://docs.usemailx.com/api-reference/actions/track',
         invalid_type_error:
-          'Event can only be a string. Read more: https://docs.useplunk.com/api-reference/actions/track',
+          'Event can only be a string. Read more: https://docs.usemailx.com/api-reference/actions/track',
       })
       .transform(n => n.toLowerCase())
       .transform(n => n.replace(/ /g, '-')),
@@ -113,10 +113,10 @@ export const EventSchemas = {
       .max(5, 'You can only send transactional emails to 5 people at a time')
       .or(email.transform(e => [e])),
     subject: z.string({
-      required_error: 'Subject is required. Read more: https://docs.useplunk.com/api-reference/transactional/send',
+      required_error: 'Subject is required. Read more: https://docs.usemailx.com/api-reference/transactional/send',
     }),
     body: z.string({
-      required_error: 'Body is required. Read more: https://docs.useplunk.com/api-reference/transactional/send',
+      required_error: 'Body is required. Read more: https://docs.usemailx.com/api-reference/transactional/send',
     }),
     headers: z.record(z.string()).nullish(),
   }),
@@ -135,7 +135,7 @@ export const CampaignSchemas = {
       .max(70, 'Subject needs to be less than 70 characters long'),
     body: z.string().min(1, 'Body needs to be at least 1 character long'),
     recipients: z.array(z.string()),
-    style: z.nativeEnum(TemplateStyle).default('PLUNK'),
+    style: z.nativeEnum(TemplateStyle).default('mailx'),
   }),
   update: z.object({
     id,
@@ -145,7 +145,7 @@ export const CampaignSchemas = {
       .max(70, 'Subject needs to be less than 70 characters long'),
     body: z.string().min(1, 'Body needs to be at least 1 character long'),
     recipients: z.array(z.string()),
-    style: z.nativeEnum(TemplateStyle).default('PLUNK'),
+    style: z.nativeEnum(TemplateStyle).default('mailx'),
   }),
 };
 
@@ -196,14 +196,14 @@ export const TemplateSchemas = {
     subject: z.string().min(1, "Subject can't be empty").max(70, 'Subject needs to be less than 70 characters long'),
     body: z.string().min(1, "Body can't be empty"),
     type: z.nativeEnum(TemplateType).default('MARKETING'),
-    style: z.nativeEnum(TemplateStyle).default('PLUNK'),
+    style: z.nativeEnum(TemplateStyle).default('mailx'),
   }),
   update: z.object({
     id,
     subject: z.string().min(1, "Subject can't be empty").max(70, 'Subject needs to be less than 70 characters long'),
     body: z.string().min(1, "Body can't be empty"),
     type: z.nativeEnum(TemplateType).default('MARKETING'),
-    style: z.nativeEnum(TemplateStyle).default('PLUNK'),
+    style: z.nativeEnum(TemplateStyle).default('mailx'),
   }),
 };
 
@@ -250,7 +250,7 @@ export const IdentitySchemas = {
     id: id,
     email: email.refine(
       e => {
-        return !['gmail.com', 'outlook.com', 'hotmail.com', 'yahoo.com', 'useplunk.com', 'useplunk.dev'].includes(
+        return !['gmail.com', 'outlook.com', 'hotmail.com', 'yahoo.com', 'usemailx.com', 'usemailx.dev'].includes(
           e.split('@')[1],
         );
       },
