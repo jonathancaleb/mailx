@@ -27,5 +27,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: driaug/mailx:latest
+          tags: calebsabila/mailx:latest
           platforms: linux/amd64,linux/arm64
