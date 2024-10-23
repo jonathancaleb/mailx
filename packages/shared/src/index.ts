@@ -135,7 +135,7 @@ export const CampaignSchemas = {
       .max(70, 'Subject needs to be less than 70 characters long'),
     body: z.string().min(1, 'Body needs to be at least 1 character long'),
     recipients: z.array(z.string()),
-    style: z.nativeEnum(TemplateStyle).default('mailx'),
+    style: z.nativeEnum(TemplateStyle).default('MAILX'),
   }),
   update: z.object({
     id,
@@ -145,7 +145,7 @@ export const CampaignSchemas = {
       .max(70, 'Subject needs to be less than 70 characters long'),
     body: z.string().min(1, 'Body needs to be at least 1 character long'),
     recipients: z.array(z.string()),
-    style: z.nativeEnum(TemplateStyle).default('mailx'),
+    style: z.nativeEnum(TemplateStyle).default('MAILX'),
   }),
 };
 
@@ -196,14 +196,14 @@ export const TemplateSchemas = {
     subject: z.string().min(1, "Subject can't be empty").max(70, 'Subject needs to be less than 70 characters long'),
     body: z.string().min(1, "Body can't be empty"),
     type: z.nativeEnum(TemplateType).default('MARKETING'),
-    style: z.nativeEnum(TemplateStyle).default('mailx'),
+    style: z.nativeEnum(TemplateStyle).default('MAILX'),
   }),
   update: z.object({
     id,
     subject: z.string().min(1, "Subject can't be empty").max(70, 'Subject needs to be less than 70 characters long'),
     body: z.string().min(1, "Body can't be empty"),
     type: z.nativeEnum(TemplateType).default('MARKETING'),
-    style: z.nativeEnum(TemplateStyle).default('mailx'),
+    style: z.nativeEnum(TemplateStyle).default('MAILX'),
   }),
 };
 

@@ -1,5 +1,4 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { UserSchemas } from "@mailx/shared";
 import type { User } from "@prisma/client";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
