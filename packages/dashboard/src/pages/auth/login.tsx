@@ -1,5 +1,4 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import type { User } from "@prisma/client";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,6 +9,7 @@ import logo from "../../../public/assets/logo.png";
 import { FullscreenLoader, Redirect } from "../../components";
 import { useUser } from "../../lib/hooks/users";
 import { network } from "../../lib/network";
+import { User } from "@prisma/client";
 
 /**
  *
