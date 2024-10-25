@@ -1,4 +1,4 @@
-import {z} from 'zod';
+import { z } from 'zod';
 import {TemplateStyle, TemplateType} from '@prisma/client';
 
 const email = z
